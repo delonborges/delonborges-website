@@ -1,2 +1,2 @@
-# delonborges-website
+# This is a simple static website
 Simple website
