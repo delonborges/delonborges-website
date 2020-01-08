@@ -5,8 +5,9 @@ body {
   background-size: cover;
   background-color: #333333;
   font-family: "Fira Code", monospace;
-  height: 100vh;
+  height: calc(100vh - 22px);
   padding: 10px;
+  margin: 0;
   opacity: 0.9;
 }
 
@@ -15,8 +16,8 @@ section {
   color: #dddddd;
   background-color: #333333;
   border: 2px solid #ff5100;
-  height: calc(100vh - 24px);
-  padding: 10px;
+  height: calc(100% - 44px);
+  padding: 20px;
 }
 
 section img {
