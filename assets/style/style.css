@@ -1,0 +1,114 @@
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css);
+
+body {
+  background: url(../images/background/code_background.jpg);
+  background-size: cover;
+  background-color: #333333;
+  font-family: "Fira Code", monospace;
+  height: 100vh;
+  padding: 10px;
+  opacity: 0.9;
+}
+
+section {
+  margin: auto;
+  color: #dddddd;
+  background-color: #333333;
+  border: 2px solid #ff5100;
+  height: calc(100vh - 22px);
+  padding: 10px;
+}
+
+section img {
+  filter: invert(100%);
+}
+
+section .name {
+  text-align: center;
+  font-size: 3rem;
+}
+
+section .contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  bottom: 20px;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+section .contact .details {
+  display: flex;
+  margin: 0 5px;
+  padding: 0 5px;
+}
+
+section .contact .icons {
+  margin: 0 10px;
+}
+
+a:link {
+  color: #ff5100;
+}
+
+a:visited {
+  color: #ff5100;
+}
+
+.intro-text {
+  line-height: 0;
+  padding: 20px;
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  section .name {
+    font-size: 2.2rem;
+  }
+  .intro-text {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  section .contact .details {
+    font-size: 0.8rem;
+  }
+  section .contact .icons {
+    width: 20px;
+    height: 20px;
+    margin: 0 8px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  section .name {
+    font-size: 1rem;
+  }
+  section .contact .icons {
+    width: 16px;
+    height: 16px;
+  }
+  .intro-text {
+    font-size: 0.6rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  section .name {
+    font-size: 0.8rem;
+  }
+  section .contact .details {
+    font-size: 0.6rem;
+  }
+  section .contact .icons {
+    width: 16px;
+    height: 16px;
+    margin: 0 6px;
+  }
+  .intro-text {
+    margin: 0;
+    padding: 20px 0;
+    font-size: 0.5rem;
+  }
+}
