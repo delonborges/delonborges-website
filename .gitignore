@@ -1,3 +1,7 @@
+
+# Created by https://www.gitignore.io/api/osx,node,linux,windows,webstorm+all
+# Edit at https://www.gitignore.io/?templates=osx,node,linux,windows,webstorm+all
+
 ### Linux ###
 *~
 
@@ -258,3 +262,5 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# End of https://www.gitignore.io/api/osx,node,linux,windows,webstorm+all
