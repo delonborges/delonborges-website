@@ -1,2 +1,2 @@
 # Delon Borges
-Simple personal website
+Personal website
