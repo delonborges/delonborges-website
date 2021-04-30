@@ -1,10 +1,6 @@
 #!/usr/bin/env sh
 # abort on errors
 set -e
-
-git config --global init.defaultBranch main
-git config --global user.email "delon.borges@icloud.com"
-git config --global user.name "Delon Borges"
 # build
 npm run build
 # navigate into the build output directory
@@ -14,5 +10,5 @@ echo 'delonborges.com' > CNAME
 git init
 git add -A
 git commit -m 'Deploy'
-git push -f https://delonborges:${{ secrets.GITHUB_TOKEN }}@github.com/delonborges/delonborges-website.git main:gh-pages
+git push -f git@github.com:delonborges/delonborges-website.git main:gh-pages
 cd -
