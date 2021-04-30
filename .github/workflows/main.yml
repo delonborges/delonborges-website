@@ -12,3 +12,4 @@ jobs:
         username: 'delonborges'
         reponame: 'delonborges-website'
         token: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
+        cname: 'delonborges.com'
