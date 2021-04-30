@@ -20,8 +20,6 @@ jobs:
             npm run build
             cd dist
             echo 'delonborges.com' > CNAME; fi
-            git config --global user.email "${{ inputs.gitemail }}"
-            git config --global user.name "${{ inputs.gitname }}"
             git init
             git add -A
             git commit -m 'Deploy'
