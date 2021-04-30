@@ -13,6 +13,6 @@ cd dist
 echo 'delonborges.com' > CNAME
 git init
 git add -A
-git commit -m 'deploy'
-git push -f git@github.com:delonborges/delonborges-website.git main:gh-pages
+git commit -m 'Deploy'
+git push -f https://delonborges:${{ secrets.GITHUB_TOKEN }}@github.com/delonborges/delonborges-website.git main:gh-pages
 cd -
