@@ -6,6 +6,8 @@ jobs:
     name: Build Vue
     steps:
     - uses: actions/checkout@v2
+      with:
+        ref: main
     - id: Build-Vue
       uses: delonborges/actions-vue-gh-pages-deploy@v1.0.0
       with:
