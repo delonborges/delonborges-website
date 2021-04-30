@@ -2,7 +2,7 @@
   <section class="info">
     <div class="name">
       <h1>
-        Delon Barbosa Borges
+        Delon Borges
       </h1>
       <div class="intro-text">
         <h6>

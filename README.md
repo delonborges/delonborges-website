@@ -19,8 +19,3 @@ npm run build
 ```
 npm run lint
 ```
-
-### Project deploy
-```
-npm run deploy
-
