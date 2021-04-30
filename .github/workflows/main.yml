@@ -19,7 +19,7 @@ jobs:
             git config --global user.name 'Delon Borges'
             npm run build
             cd dist
-            echo 'delonborges.com' > CNAME; fi
+            echo 'delonborges.com' > CNAME
             git init
             git add -A
             git commit -m 'Deploy'
