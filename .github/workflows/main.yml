@@ -10,7 +10,6 @@ jobs:
       with:
         node-version: '14'
         check-latest: true
-    - run: git config --global url."https://${{ secrets.PAT }}@github.com/".insteadOf ssh://git@github.com/
     - run: npm install
     - name: Build Vue
       run: |
@@ -24,5 +23,5 @@ jobs:
             git init
             git add -A
             git commit -m 'Deploy'
-            git push -f https://github.com/delonborges/delonborges-website.git main:gh-pages
+            git push -f https://delonborges:${{ secrets.GITHUB_TOKEN }}@github.com/delonborges/delonborges-website.git main:gh-pages
       shell: bash
