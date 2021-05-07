@@ -1,18 +1,19 @@
 <template>
   <div id="app">
-    <MainPage msg="Welcome to Delon Borges page"/>
+    <MainPage msg="Welcome to Delon Borges page" />
   </div>
 </template>
 
-<script>
-import MainPage from './components/MainPage.vue'
+<script lang="ts">
+import { Component, Vue } from "vue-property-decorator";
+import MainPage from "./components/MainPage.vue";
 
-export default {
-  name: 'App',
+@Component({
   components: {
-    MainPage
-  }
-}
+    MainPage,
+  },
+})
+export default class App extends Vue {}
 </script>
 
 <style>
@@ -44,8 +45,8 @@ img {
   filter: invert(100%);
 }
 
-a:link, a:visited {
+a:link,
+a:visited {
   color: #ff5100;
 }
-
 </style>
