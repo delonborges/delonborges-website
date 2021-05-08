@@ -10,7 +10,6 @@ jobs:
 
       - name: Cypress run
         uses: cypress-io/github-action@v2
-        continue-on-error: true
         with:
           record: true
         env:
