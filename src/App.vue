@@ -1,19 +1,17 @@
 <template>
-  <div id="app">
-    <MainPage msg="Welcome to Delon Borges page" />
-  </div>
+  <MainPage msg="Welcome to Delon Borges page" />
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { defineComponent } from "vue";
 import MainPage from "./components/MainPage.vue";
 
-@Component({
+export default defineComponent({
+  name: "App",
   components: {
     MainPage,
   },
-})
-export default class App extends Vue {}
+});
 </script>
 
 <style>

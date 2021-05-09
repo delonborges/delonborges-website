@@ -19,10 +19,10 @@ export default (
   on("task", {});
 
   return Object.assign({}, config, {
-    fixturesFolder: "tests/e2e/fixtures",
-    integrationFolder: "tests/e2e/specs",
-    screenshotsFolder: "tests/e2e/screenshots",
-    videosFolder: "tests/e2e/videos",
-    supportFile: "tests/e2e/support/index.ts",
+    fixturesFolder: "e2e/fixtures",
+    integrationFolder: "e2e/specs",
+    screenshotsFolder: "e2e/screenshots",
+    videosFolder: "e2e/videos",
+    supportFile: "e2e/support/index.ts",
   });
 };

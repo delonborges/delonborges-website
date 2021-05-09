@@ -1,5 +1,5 @@
 {
   "baseUrl": "https://delonborges.com",
-  "pluginsFile": "tests/e2e/plugins/index.ts",
+  "pluginsFile": "e2e/plugins/index.ts",
   "projectId": "swozug"
 }
