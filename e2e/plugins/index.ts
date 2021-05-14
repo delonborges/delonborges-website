@@ -20,7 +20,7 @@ export default (
 
   return Object.assign({}, config, {
     fixturesFolder: "e2e/fixtures",
-    integrationFolder: "e2e/specs",
+    integrationFolder: "e2e/tests",
     screenshotsFolder: "e2e/screenshots",
     videosFolder: "e2e/videos",
     supportFile: "e2e/support/index.ts",
