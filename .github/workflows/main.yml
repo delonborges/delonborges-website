@@ -25,4 +25,5 @@ jobs:
         ftp_password: ${{ secrets.FTP_PASSWORD }}
         local_source_dir: "./"
         dist_target_dir: "./public_html/"
+        exclude: "'^.git/' '^.github/' '^.gitignore' '^README.md'"
         delete: "true"
