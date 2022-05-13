@@ -18,3 +18,19 @@ img {
     max-width: 100%;
     display: block;
 }
+
+.subtitle {
+    font-size: 8rem;
+    line-height: 1;
+    text-transform: uppercase;
+    word-break: break-all;
+    max-width: 4ch;
+}
+
+@media (max-width: 800px) {
+    .subtitle {
+        font-size: 3rem;
+        text-transform: capitalize;
+        max-width: initial;
+    }
+}
