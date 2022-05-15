@@ -43,15 +43,18 @@
         grid-template-columns: 1fr 1fr;
         gap: 40px;
     }
+
     .introduction h1 {
         font-size: 2rem;
         margin-bottom: 10px;
     }
+
     .introduction h1::before {
         width: 30px;
         height: 10px;
         left: 0;
     }
+
     .introduction p {
         font-size: 1rem;
     }
@@ -61,6 +64,7 @@
     .introduction {
         grid-template-columns: 1fr;
     }
+
     .introduction img {
         display: none;
     }

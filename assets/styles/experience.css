@@ -87,12 +87,15 @@
         grid-template-columns: 1fr;
         gap: 40px;
     }
+
     .experience .subtitle {
         color: #141414;
     }
+
     .experience-text {
         font-size: 1.25rem;
     }
+
     .company-year {
         position: initial;
         order: 1;
