@@ -32,6 +32,11 @@
     color: #525252;
 }
 
+.introduction p a {
+    text-decoration: none;
+    color: #141414;
+}
+
 @media (max-width: 1000px) {
     .introduction h1 {
         font-size: 3rem;
