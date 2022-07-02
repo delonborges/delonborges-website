@@ -2,6 +2,7 @@ body {
     font-family: 'Fira Sans', Arial, sans-serif;
     margin: 0;
     color: #141414;
+    background-color: #cccccc;
 }
 
 h1, h2, h3, p {
