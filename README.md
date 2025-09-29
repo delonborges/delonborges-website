@@ -2,7 +2,7 @@
 
 ## 🗂 About the Project
 
-Professional personal portfolio developed with focus on performance, accessibility and SEO. The website presents information about professional experience, education and projects by Delon Borges, Software Engineer specialized in backend development.
+Professional personal portfolio developed with **Kotlin and Ktor framework**, focusing on performance, accessibility and SEO. The website presents information about professional experience, education and projects by Delon Borges, Software Engineer specialized in backend development. Built as a server-side rendered web application using modern backend technologies.
 
 ## 🚀 Implemented Improvements
 
@@ -32,9 +32,21 @@ Professional personal portfolio developed with focus on performance, accessibili
 
 ## 💾 Technologies
 
+### Backend
+- [Kotlin](https://kotlinlang.org/) 2.2.20 - Programming language
+- [Ktor](https://ktor.io/) 3.3.0 - Web application framework
+- [Netty](https://netty.io/) - High-performance HTTP server engine
+- [Gradle](https://gradle.org/) - Build automation and dependency management
+
+### Frontend (Server-Side Rendered)
+- [kotlinx.html](https://github.com/Kotlin/kotlinx.html) - Type-safe HTML builders
 - [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML) - Semantic structure
 - [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS) - Responsive styling
 - [Google Fonts](https://fonts.google.com/) - Typography (Fira Sans)
+
+### Infrastructure & Logging
+- [Logback](http://logback.qos.ch/) - Logging framework
+- [YAML Configuration](https://yaml.org/) - Application configuration
 
 ---
 
@@ -42,18 +54,35 @@ Professional personal portfolio developed with focus on performance, accessibili
 
 ```
 delonborges-website/
-├── index.html              # Main page
-├── assets/
-│   ├── images/            # Images and icons
-│   └── styles/            # Modular CSS files
-│       ├── style.css      # Main import file
-│       ├── global.css     # Global styles and reset
-│       ├── header.css     # Header styles
-│       ├── introduction.css # Introduction styles
-│       ├── experience.css # Experience section styles
-│       ├── education.css  # Education section styles
-│       └── footer.css     # Footer styles
-└── README.md              # Project documentation
+├── build.gradle.kts                    # Gradle build configuration
+├── settings.gradle.kts                 # Gradle settings
+├── gradle.properties                   # Gradle properties
+├── src/
+│   └── main/
+│       ├── kotlin/                     # Kotlin source code
+│       │   ├── Application.kt          # Main application entry point
+│       │   ├── Routing.kt              # HTTP routing configuration
+│       │   ├── model/
+│       │   │   └── Portfolio.kt        # Data models (PersonalInfo, Experience, etc.)
+│       │   ├── service/
+│       │   │   └── PortfolioService.kt # Business logic and data provider
+│       │   └── templates/
+│       │       └── PortfolioTemplate.kt # HTML template generation
+│       └── resources/
+│           ├── application.yaml        # Application configuration
+│           ├── logback.xml            # Logging configuration
+│           └── assets/                # Static resources
+│               ├── images/            # Images and icons
+│               └── styles/            # Modular CSS files
+│                   ├── style.css      # Main import file
+│                   ├── global.css     # Global styles and reset
+│                   ├── header.css     # Header styles
+│                   ├── introduction.css # Introduction styles
+│                   ├── experience.css # Experience section styles
+│                   ├── education.css  # Education section styles
+│                   └── footer.css     # Footer styles
+├── gradle/                            # Gradle wrapper
+└── README.md                          # Project documentation
 ```
 
 ---
