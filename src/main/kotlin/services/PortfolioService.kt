@@ -1,6 +1,12 @@
-package com.delonborges.service
+package com.delonborges.services
 
-import com.delonborges.model.*
+import com.delonborges.models.Course
+import com.delonborges.models.Education
+import com.delonborges.models.Experience
+import com.delonborges.models.Language
+import com.delonborges.models.PersonalInfo
+import com.delonborges.models.PortfolioData
+import com.delonborges.models.Project
 
 object PortfolioService {
     fun getPortfolioData(): PortfolioData {
