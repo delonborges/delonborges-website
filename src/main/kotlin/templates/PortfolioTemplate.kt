@@ -1,6 +1,6 @@
 package com.delonborges.templates
 
-import com.delonborges.model.PortfolioData
+import com.delonborges.models.PortfolioData
 import kotlinx.html.*
 
 fun HTML.portfolioPage(data: PortfolioData) {
