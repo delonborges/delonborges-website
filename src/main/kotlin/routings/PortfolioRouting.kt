@@ -1,4 +1,4 @@
-package com.delonborges
+package com.delonborges.routings
 
 import com.delonborges.service.PortfolioService
 import com.delonborges.templates.portfolioPage
