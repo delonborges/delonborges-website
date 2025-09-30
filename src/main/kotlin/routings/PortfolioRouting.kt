@@ -1,6 +1,6 @@
-package com.delonborges
+package com.delonborges.routings
 
-import com.delonborges.service.PortfolioService
+import com.delonborges.services.PortfolioService
 import com.delonborges.templates.portfolioPage
 import io.ktor.server.application.*
 import io.ktor.server.html.*

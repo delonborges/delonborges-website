@@ -1,4 +1,4 @@
-package com.delonborges.model
+package com.delonborges.models
 
 data class PersonalInfo(
     val name: String,

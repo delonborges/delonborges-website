@@ -2,18 +2,18 @@
 
 ## 🗂 About the Project
 
-Professional personal portfolio developed with **Kotlin and Ktor framework**, focusing on performance, accessibility and SEO. The website presents information about professional experience, education and projects by Delon Borges, Software Engineer specialized in backend development. Built as a server-side rendered web application using modern backend technologies.
+Professional personal portfolio developed with **Kotlin and Ktor framework**, focusing on performance, accessibility and SEO. The website presents information about professional experience, education and projects by Delon Borges, a Software Engineer specialized in backend development. Built as a server-side rendered web application using modern backend technologies.
 
 ## 🚀 Implemented Improvements
 
 ### 🔍 SEO and Metadata
-- **Open Graph and Twitter meta tags**: Optimization for social media sharing
+- **Open Graph and Twitter meta-tags**: Optimization for social media sharing
 - **Structured Data (JSON-LD)**: Schema.org markup for better search engine indexation
 - **Essential meta tags**: Keywords, author, robots, enhanced description
 - **Favicon**: Custom icon for the website
 
 ### ♿ Accessibility
-- **Skip navigation**: Link to jump to main content
+- **Skip navigation**: Link to jump to the main content
 - **Aria labels**: Better description for assistive technologies
 - **Alt texts**: More detailed descriptions for images
 - **Semantic navigation**: More accessible HTML structure
@@ -54,35 +54,35 @@ Professional personal portfolio developed with **Kotlin and Ktor framework**, fo
 
 ```
 delonborges-website/
-├── build.gradle.kts                    # Gradle build configuration
-├── settings.gradle.kts                 # Gradle settings
-├── gradle.properties                   # Gradle properties
+├── build.gradle.kts                        # Gradle build configuration
+├── settings.gradle.kts                     # Gradle settings
+├── gradle.properties                       # Gradle properties
 ├── src/
 │   └── main/
-│       ├── kotlin/                     # Kotlin source code
-│       │   ├── Application.kt          # Main application entry point
-│       │   ├── Routing.kt              # HTTP routing configuration
-│       │   ├── model/
-│       │   │   └── Portfolio.kt        # Data models (PersonalInfo, Experience, etc.)
-│       │   ├── service/
-│       │   │   └── PortfolioService.kt # Business logic and data provider
+│       ├── kotlin/                         # Kotlin source code
+│       │   ├── Application.kt              # Main application entry point
+│       │   ├── Routing.kt                  # HTTP routing configuration
+│       │   ├── models/
+│       │   │   └── Portfolio.kt            # Data models (PersonalInfo, Experience, etc.)
+│       │   ├── services/
+│       │   │   └── PortfolioService.kt     # Business logic and data provider
 │       │   └── templates/
-│       │       └── PortfolioTemplate.kt # HTML template generation
+│       │       └── PortfolioTemplate.kt    # HTML template generation
 │       └── resources/
-│           ├── application.yaml        # Application configuration
-│           ├── logback.xml            # Logging configuration
-│           └── assets/                # Static resources
-│               ├── images/            # Images and icons
-│               └── styles/            # Modular CSS files
-│                   ├── style.css      # Main import file
-│                   ├── global.css     # Global styles and reset
-│                   ├── header.css     # Header styles
-│                   ├── introduction.css # Introduction styles
-│                   ├── experience.css # Experience section styles
-│                   ├── education.css  # Education section styles
-│                   └── footer.css     # Footer styles
-├── gradle/                            # Gradle wrapper
-└── README.md                          # Project documentation
+│           ├── application.yaml            # Application configuration
+│           ├── logback.xml                 # Logging configuration
+│           └── assets/                     # Static resources
+│               ├── images/                 # Images and icons
+│               └── styles/                 # Modular CSS files
+│                   ├── style.css           # Main import file
+│                   ├── global.css          # Global styles and reset
+│                   ├── header.css          # Header styles
+│                   ├── introduction.css    # Introduction styles
+│                   ├── experience.css      # Experience section styles
+│                   ├── education.css       # Education section styles
+│                   └── footer.css          # Footer styles
+├── gradle/                                 # Gradle wrapper
+└── README.md                               # Project documentation
 ```
 
 ---
@@ -103,4 +103,4 @@ delonborges-website/
 
 ---
 
-*Project developed with focus on web development best practices, accessibility and performance.*
+*Project developed with a focus on web development best practices, accessibility and performance.*
