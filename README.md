@@ -41,6 +41,7 @@ Professional personal portfolio developed with **Kotlin and Ktor framework**, fo
 
 ### Frontend (Server-Side Rendered)
 - [kotlinx.html](https://github.com/Kotlin/kotlinx.html) 0.11.0 - Type-safe HTML builders
+- [kotlin-css](https://github.com/JetBrains/kotlin-wrappers/tree/master/kotlin-css) 2025.9.11 - Type-safe CSS in Kotlin
 - [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML) - Semantic structure
 - [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS) - Responsive styling
 - [Google Fonts](https://fonts.google.com/) - Typography (Fira Sans)
@@ -58,59 +59,68 @@ delonborges-website/
 ├── build.gradle.kts                                # Gradle build configuration
 ├── settings.gradle.kts                             # Gradle settings
 ├── gradle.properties                               # Gradle properties
-├── src/
-│   └── main/
-│       ├── kotlin/                                 # Kotlin source code
-│       │   ├── Application.kt                      # Main application entry point
-│       │   ├── models/                             # Data models
-│       │   │   ├── Portfolio.kt                    # Main portfolio data model
-│       │   │   ├── PersonalInfo.kt                 # Personal information model
-│       │   │   ├── Experience.kt                   # Professional experience model
-│       │   │   ├── Education.kt                    # Education information model
-│       │   │   ├── Course.kt                       # Course/certification model
-│       │   │   ├── Project.kt                      # Project information model
-│       │   │   └── Language.kt                     # Language proficiency model
-│       │   ├── routings/                           # HTTP routing configuration
-│       │   │   └── PortfolioRouting.kt             # Main portfolio routes
-│       │   ├── services/                           # Business logic layer
-│       │   │   └── PortfolioService.kt             # Portfolio data service
-│       │   └── templates/                          # HTML template generation
-│       │       ├── PortfolioTemplate.kt            # Main template orchestrator
-│       │       ├── renderers/                      # Component renderers
-│       │       │   ├── MetaTagsRenderer.kt         # SEO meta tags
-│       │       │   ├── ResourceLinksRenderer.kt    # External resources
-│       │       │   ├── StructuredDataRenderer.kt   # JSON-LD schema
-│       │       │   ├── SkipLinkRenderer.kt         # Accessibility navigation
-│       │       │   ├── HeaderRenderer.kt           # Page header
-│       │       │   ├── IntroductionRenderer.kt     # Personal introduction
-│       │       │   ├── ExperienceRenderer.kt       # Work experience
-│       │       │   ├── EducationRenderer.kt        # Education section
-│       │       │   ├── CoursesRenderer.kt          # Courses/certifications
-│       │       │   ├── ProjectsRenderer.kt         # Projects showcase
-│       │       │   ├── LanguagesRenderer.kt        # Language skills
-│       │       │   └── FooterRenderer.kt           # Page footer
-│       │       └── styles/                         # CSS styling components
-│       │           ├── BaseStyle.kt                # Base styling utilities
-│       │           ├── GlobalStyle.kt              # Global styles and reset
-│       │           ├── HeaderStyle.kt              # Header section styles
-│       │           ├── IntroductionStyle.kt        # Introduction styles
-│       │           ├── ExperienceStyle.kt          # Experience section styles
-│       │           ├── EducationStyle.kt           # Education section styles
-│       │           ├── FooterStyle.kt              # Footer styles
-│       │           └── ResponsiveStyle.kt          # Responsive design rules
-│       └── resources/
-│           ├── application.yaml                    # Application configuration
-│           ├── logback.xml                         # Logging configuration
-│           └── assets/                             # Static resources
-│               └── images/                         # Images and icons
-│                   ├── profile.png                 # Profile picture
-│                   ├── logo.svg                    # Website logo
-│                   ├── education.svg               # Education icon
-│                   ├── languages.svg               # Languages icon
-│                   ├── lines.svg                   # Decorative lines
-│                   └── projects.svg                # Projects icon
-├── gradle/                                         # Gradle wrapper
-└── README.md                                       # Project documentation
+├── gradlew                                         # Gradle wrapper (Unix)
+├── gradlew.bat                                     # Gradle wrapper (Windows)
+├── LICENSE                                         # Project license
+├── README.md                                       # Project documentation
+├── build/                                          # Build output directory
+│   ├── classes/                                    # Compiled classes
+│   ├── distributions/                              # Distribution packages
+│   ├── libs/                                       # Generated JAR files
+│   └── resources/                                  # Processed resources
+├── gradle/                                         # Gradle wrapper files
+│   └── wrapper/
+└── src/
+    └── main/
+        ├── kotlin/                                 # Kotlin source code
+        │   ├── Application.kt                      # Main application entry point
+        │   ├── models/                             # Data models
+        │   │   ├── Portfolio.kt                    # Main portfolio data model
+        │   │   ├── PersonalInfo.kt                 # Personal information model
+        │   │   ├── Experience.kt                   # Professional experience model
+        │   │   ├── Education.kt                    # Education information model
+        │   │   ├── Course.kt                       # Course/certification model
+        │   │   ├── Project.kt                      # Project information model
+        │   │   └── Language.kt                     # Language proficiency model
+        │   ├── routings/                           # HTTP routing configuration
+        │   │   └── PortfolioRouting.kt             # Main portfolio routes
+        │   ├── services/                           # Business logic layer
+        │   │   └── PortfolioService.kt             # Portfolio data service
+        │   └── templates/                          # HTML template generation
+        │       ├── PortfolioTemplate.kt            # Main template orchestrator
+        │       ├── renderers/                      # Component renderers
+        │       │   ├── MetaTagsRenderer.kt         # SEO meta tags
+        │       │   ├── ResourceLinksRenderer.kt    # External resources
+        │       │   ├── StructuredDataRenderer.kt   # JSON-LD schema
+        │       │   ├── SkipLinkRenderer.kt         # Accessibility navigation
+        │       │   ├── HeaderRenderer.kt           # Page header
+        │       │   ├── IntroductionRenderer.kt     # Personal introduction
+        │       │   ├── ExperienceRenderer.kt       # Work experience
+        │       │   ├── EducationRenderer.kt        # Education section
+        │       │   ├── CoursesRenderer.kt          # Courses/certifications
+        │       │   ├── ProjectsRenderer.kt         # Projects showcase
+        │       │   ├── LanguagesRenderer.kt        # Language skills
+        │       │   └── FooterRenderer.kt           # Page footer
+        │       └── styles/                         # CSS styling components
+        │           ├── BaseStyle.kt                # Base styling utilities
+        │           ├── GlobalStyle.kt              # Global styles and reset
+        │           ├── HeaderStyle.kt              # Header section styles
+        │           ├── IntroductionStyle.kt        # Introduction styles
+        │           ├── ExperienceStyle.kt          # Experience section styles
+        │           ├── EducationStyle.kt           # Education section styles
+        │           ├── FooterStyle.kt              # Footer styles
+        │           └── ResponsiveStyle.kt          # Responsive design rules
+        └── resources/
+            ├── application.yaml                    # Application configuration
+            ├── logback.xml                         # Logging configuration
+            └── assets/                             # Static resources
+                └── images/                         # Images and icons
+                    ├── profile.png                 # Profile picture
+                    ├── logo.svg                    # Website logo
+                    ├── education.svg               # Education icon
+                    ├── languages.svg               # Languages icon
+                    ├── lines.svg                   # Decorative lines
+                    └── projects.svg                # Projects icon
 ```
 
 ---
@@ -164,7 +174,7 @@ The application will be packaged in `build/libs/` directory.
 - **Services**: Business logic and data provision
 - **Templates**: HTML generation using kotlinx.html
 - **Renderers**: Specialized components for different page sections
-- **Styles**: CSS-in-Kotlin approach for styling
+- **Styles**: CSS-in-Kotlin approach for styling using kotlin-css
 
 ---
 
