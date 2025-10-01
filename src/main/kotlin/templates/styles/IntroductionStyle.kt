@@ -1,55 +1,48 @@
 package com.delonborges.templates.styles
 
-import kotlinx.html.HEAD
-import kotlinx.html.style
-import kotlinx.html.unsafe
+import kotlinx.css.*
+import kotlinx.css.properties.LineHeight
+import kotlinx.css.properties.TextDecoration
 
 object IntroductionStyle {
-    fun render(head: HEAD) {
-        head.style {
-            unsafe {
-                +"""
-                /* Introduction Styles */
-                .introduction {
-                    max-width: 1200px;
-                    padding: 40px 20px;
-                    margin: 0 auto;
-                    display: grid;
-                    grid-template-columns: 1fr 2fr;
-                    gap: 100px;
-                    align-items: center;
-                }
+    fun CssBuilder.apply() {
+        rule(".introduction") {
+            maxWidth = 1200.px
+            padding = Padding(40.px, 20.px)
+            margin = Margin(0.px, LinearDimension.auto)
+            display = Display.grid
+            put("grid-template-columns", "1fr 2fr")
+            put("gap", "100px")
+            alignItems = Align.center
+        }
 
-                .introduction h1 {
-                    font-size: 4.5rem;
-                    line-height: 1.125;
-                    margin-bottom: 30px;
-                    position: relative;
-                }
+        rule(".introduction h1") {
+            fontSize = 4.5.rem
+            lineHeight = LineHeight("1.125")
+            marginBottom = 30.px
+            position = Position.relative
+        }
 
-                .introduction h1::before {
-                    content: "";
-                    display: block;
-                    width: 130px;
-                    height: 100px;
-                    background: url('/assets/images/lines.svg') no-repeat center;
-                    position: absolute;
-                    top: -15px;
-                    left: -40px;
-                    z-index: -1;
-                }
+        rule(".introduction h1::before") {
+            put("content", "\"\"")
+            display = Display.block
+            width = 130.px
+            height = 100.px
+            put("background", "url('/assets/images/lines.svg') no-repeat center")
+            position = Position.absolute
+            top = (-15).px
+            left = (-40).px
+            zIndex = -1
+        }
 
-                .introduction p {
-                    font-size: 1.5rem;
-                    color: #525252;
-                }
+        rule(".introduction p") {
+            fontSize = 1.5.rem
+            color = Color("#525252")
+        }
 
-                .introduction p a {
-                    text-decoration: none;
-                    color: #141414;
-                }
-                """.trimIndent()
-            }
+        rule(".introduction p a") {
+            textDecoration = TextDecoration.none
+            color = Color("#141414")
         }
     }
 }

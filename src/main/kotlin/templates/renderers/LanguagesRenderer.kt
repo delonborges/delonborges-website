@@ -14,7 +14,7 @@ object LanguagesRenderer {
                 languages.forEach { language ->
                     li {
                         +language.name
-                        span { +"/ ${language.level}" }
+                        span { +" / ${language.level}" }
                     }
                 }
             }

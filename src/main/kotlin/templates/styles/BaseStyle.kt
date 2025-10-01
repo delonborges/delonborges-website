@@ -1,65 +1,58 @@
 package com.delonborges.templates.styles
 
-import kotlinx.html.HEAD
-import kotlinx.html.style
-import kotlinx.html.unsafe
+import kotlinx.css.*
+import kotlinx.css.properties.LineHeight
+import kotlinx.css.properties.TextDecoration
 
 object BaseStyle {
-    fun render(head: HEAD) {
-        head.style {
-            unsafe {
-                +"""
-                /* Global Base Styles */
-                body {
-                    font-family: 'Fira Sans', Arial, sans-serif;
-                    margin: 0;
-                    color: #141414;
-                    background-color: #cccccc;
-                }
+    fun CssBuilder.apply() {
+        body {
+            fontFamily = "'Fira Sans', Arial, sans-serif"
+            margin = Margin(0.px)
+            color = Color("#141414")
+            backgroundColor = Color("#cccccc")
+        }
 
-                .skip-link {
-                    position: absolute;
-                    top: -40px;
-                    left: 6px;
-                    background: #141414;
-                    color: white;
-                    padding: 8px;
-                    text-decoration: none;
-                    border-radius: 4px;
-                    font-size: 0.875rem;
-                    z-index: 1000;
-                    transition: top 0.3s;
-                }
+        rule(".skip-link") {
+            position = Position.absolute
+            top = (-40).px
+            left = 6.px
+            backgroundColor = Color("#141414")
+            color = Color.white
+            padding = Padding(8.px)
+            textDecoration = TextDecoration.none
+            borderRadius = 4.px
+            fontSize = 0.875.rem
+            zIndex = 1000
+            put("transition", "top 0.3s")
+        }
 
-                .skip-link:focus {
-                    top: 6px;
-                }
+        rule(".skip-link:focus") {
+            top = 6.px
+        }
 
-                h1, h2, h3, p {
-                    margin: 0;
-                }
+        rule("h1, h2, h3, p") {
+            margin = Margin(0.px)
+        }
 
-                ul {
-                    margin: 0;
-                    padding: 0;
-                    list-style: none;
-                }
+        rule("ul") {
+            margin = Margin(0.px)
+            padding = Padding(0.px)
+            listStyleType = ListStyleType.none
+        }
 
-                img {
-                    max-width: 100%;
-                    height: auto;
-                    display: block;
-                }
+        rule("img") {
+            maxWidth = 100.pct
+            height = LinearDimension.auto
+            display = Display.block
+        }
 
-                .subtitle {
-                    font-size: 8rem;
-                    line-height: 1;
-                    text-transform: uppercase;
-                    word-break: break-all;
-                    max-width: 4ch;
-                }
-                """.trimIndent()
-            }
+        rule(".subtitle") {
+            fontSize = 8.rem
+            lineHeight = LineHeight("1")
+            textTransform = TextTransform.uppercase
+            put("word-break", "break-all")
+            put("max-width", "4ch")
         }
     }
 }

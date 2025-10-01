@@ -1,100 +1,92 @@
 package com.delonborges.templates.styles
 
-import kotlinx.html.HEAD
-import kotlinx.html.style
-import kotlinx.html.unsafe
+import kotlinx.css.*
+import kotlinx.css.properties.LineHeight
 
 object ExperienceStyle {
-    fun render(head: HEAD) {
-        head.style {
-            unsafe {
-                +"""
-                /* Experience Styles */
-                .experience {
-                    max-width: 1200px;
-                    padding: 40px 20px;
-                    margin: 0 auto;
-                    display: grid;
-                    grid-template-columns: 1fr 2fr;
-                    gap: 100px;
-                }
+    fun CssBuilder.apply() {
+        rule(".experience") {
+            maxWidth = 1200.px
+            padding = Padding(40.px, 20.px)
+            margin = Margin(0.px, LinearDimension.auto)
+            display = Display.grid
+            put("grid-template-columns", "1fr 2fr")
+            put("gap", "100px")
+        }
 
-                .experience .subtitle {
-                    color: #e0e0e0;
-                }
+        rule(".experience .subtitle") {
+            color = Color("#e0e0e0")
+        }
 
-                .experience-text {
-                    font-size: 1.5rem;
-                    line-height: 1.33;
-                    max-width: 50ch;
-                    margin-bottom: 60px;
-                    color: #525252;
-                }
+        rule(".experience-text") {
+            fontSize = 1.5.rem
+            lineHeight = LineHeight("1.33")
+            put("max-width", "50ch")
+            marginBottom = 60.px
+            color = Color("#525252")
+        }
 
-                .experience-text strong {
-                    color: #141414;
-                }
+        rule(".experience-text strong") {
+            color = Color("#141414")
+        }
 
-                .company {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    gap: 10px 20px;
-                    padding: 20px;
-                    background: #f5f5f5;
-                    margin-bottom: 20px;
-                    border-radius: 4px;
-                    position: relative;
-                }
+        rule(".company") {
+            display = Display.grid
+            put("grid-template-columns", "1fr 1fr")
+            put("gap", "10px 20px")
+            padding = Padding(20.px)
+            backgroundColor = Color("#f5f5f5")
+            marginBottom = 20.px
+            borderRadius = 4.px
+            position = Position.relative
+        }
 
-                .company::before {
-                    content: '';
-                    display: block;
-                    width: 4px;
-                    height: 20px;
-                    background: linear-gradient(#f24f00, #d13100);
-                    position: absolute;
-                    top: 20px;
-                    left: -4px;
-                }
+        rule(".company::before") {
+            put("content", "''")
+            display = Display.block
+            width = 4.px
+            height = 20.px
+            put("background", "linear-gradient(#f24f00, #d13100)")
+            position = Position.absolute
+            top = 20.px
+            left = (-4).px
+        }
 
-                .company-year {
-                    position: absolute;
-                    top: 22px;
-                    left: -120px;
-                    text-align: right;
-                    width: 100px;
-                    color: #525252;
-                    font-size: 0.875rem;
-                }
+        rule(".company-year") {
+            position = Position.absolute
+            top = 22.px
+            left = (-120).px
+            textAlign = TextAlign.right
+            width = 100.px
+            color = Color("#525252")
+            fontSize = 0.875.rem
+        }
 
-                .company-title {
-                    font-size: 1.125rem;
-                    line-height: 1.1;
-                    font-weight: bold;
-                }
+        rule(".company-title") {
+            fontSize = 1.125.rem
+            lineHeight = LineHeight("1.1")
+            fontWeight = FontWeight.bold
+        }
 
-                .company-text {
-                    font-size: 0.875rem;
-                    line-height: 1.4;
-                    color: #525252;
-                }
+        rule(".company-text") {
+            fontSize = 0.875.rem
+            lineHeight = LineHeight("1.4")
+            color = Color("#525252")
+        }
 
-                .company-skills {
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 10px;
-                    align-content: start;
-                }
+        rule(".company-skills") {
+            display = Display.flex
+            flexWrap = FlexWrap.wrap
+            put("gap", "10px")
+            put("align-content", "start")
+        }
 
-                .company-skills li {
-                    font-size: 0.875rem;
-                    line-height: 1.4;
-                    border-radius: 4px;
-                    background: #ffffff;
-                    padding: 2px 5px;
-                }
-                """.trimIndent()
-            }
+        rule(".company-skills li") {
+            fontSize = 0.875.rem
+            lineHeight = LineHeight("1.4")
+            borderRadius = 4.px
+            backgroundColor = Color("#ffffff")
+            padding = Padding(2.px, 5.px)
         }
     }
 }
