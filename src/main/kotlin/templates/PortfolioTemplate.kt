@@ -1,8 +1,7 @@
 package com.delonborges.templates
 
 import com.delonborges.models.PortfolioData
-import com.delonborges.templates.renderers.ResourceLinksRenderer
-import com.delonborges.templates.sections.*
+import com.delonborges.templates.renderers.*
 import kotlinx.html.*
 
 fun HTML.portfolioPage(data: PortfolioData) {

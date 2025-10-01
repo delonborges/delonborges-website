@@ -1,4 +1,4 @@
-package com.delonborges.templates.sections
+package com.delonborges.templates.renderers
 
 import com.delonborges.models.Course
 import kotlinx.html.*
