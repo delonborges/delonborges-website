@@ -1,12 +1,13 @@
-package com.delonborges.templates.sections
+package com.delonborges.templates.renderers
 
+import com.delonborges.templates.styles.GlobalStyle
 import kotlinx.html.HEAD
 import kotlinx.html.link
 
 object ResourceLinksRenderer {
     fun render(head: HEAD) {
         head.apply {
-            link(rel = "stylesheet", href = "/assets/styles/style.css")
+            GlobalStyle.render(this)
             link(rel = "icon", type = "image/svg+xml", href = "/assets/images/logo.svg")
             renderGoogleFonts()
         }
