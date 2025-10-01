@@ -1,41 +1,34 @@
 package com.delonborges.templates.styles
 
-import kotlinx.html.HEAD
-import kotlinx.html.style
-import kotlinx.html.unsafe
+import kotlinx.css.*
+import kotlinx.css.properties.LineHeight
+import kotlinx.css.properties.TextDecoration
 
 object HeaderStyle {
-    fun render(head: HEAD) {
-        head.style {
-            unsafe {
-                +"""
-                /* Header Styles */
-                .header {
-                    max-width: 1200px;
-                    padding: 40px 20px;
-                    margin: 0 auto;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                }
+    fun CssBuilder.apply() {
+        rule(".header") {
+            maxWidth = 1200.px
+            padding = Padding(40.px, 20.px)
+            margin = Margin(0.px, LinearDimension.auto)
+            display = Display.flex
+            justifyContent = JustifyContent.spaceBetween
+            alignItems = Align.center
+        }
 
-                .header-menu {
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 10px;
-                    justify-content: center;
-                }
+        rule(".header-menu") {
+            display = Display.flex
+            flexWrap = FlexWrap.wrap
+            put("gap", "10px")
+            justifyContent = JustifyContent.center
+        }
 
-                .header-menu a {
-                    font-size: 1.125rem;
-                    line-height: 1.3;
-                    padding: 10px 20px;
-                    text-decoration: none;
-                    color: #141414;
-                    display: block;
-                }
-                """.trimIndent()
-            }
+        rule(".header-menu a") {
+            fontSize = 1.125.rem
+            lineHeight = LineHeight("1.3")
+            padding = Padding(10.px, 20.px)
+            textDecoration = TextDecoration.none
+            color = Color("#141414")
+            display = Display.block
         }
     }
 }

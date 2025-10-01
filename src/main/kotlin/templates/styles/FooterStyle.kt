@@ -1,55 +1,47 @@
 package com.delonborges.templates.styles
 
-import kotlinx.html.HEAD
-import kotlinx.html.style
-import kotlinx.html.unsafe
+import kotlinx.css.*
+import kotlinx.css.properties.LineHeight
 
 object FooterStyle {
-    fun render(head: HEAD) {
-        head.style {
-            unsafe {
-                +"""
-                /* Footer Styles */
-                .footer {
-                    background: #000000;
-                }
+    fun CssBuilder.apply() {
+        rule(".footer") {
+            backgroundColor = Color("#000000")
+        }
 
-                .footer-container {
-                    max-width: 1200px;
-                    padding: 120px 20px 60px 20px;
-                    margin: 0 auto;
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    gap: 60px;
-                    position: relative;
-                    align-items: center;
-                }
+        rule(".footer-container") {
+            maxWidth = 1200.px
+            padding = Padding(120.px, 20.px, 60.px, 20.px)
+            margin = Margin(0.px, LinearDimension.auto)
+            display = Display.grid
+            put("grid-template-columns", "1fr 1fr")
+            put("gap", "60px")
+            position = Position.relative
+            alignItems = Align.center
+        }
 
-                .footer-text {
-                    font-size: 1.5rem;
-                    line-height: 1.33;
-                    color: #cccccc;
-                }
+        rule(".footer-text") {
+            fontSize = 1.5.rem
+            lineHeight = LineHeight("1.33")
+            color = Color("#cccccc")
+        }
 
-                .footer-contact li {
-                    font-weight: bold;
-                    font-size: 1.75rem;
-                    line-height: 1;
-                    color: #ffffff;
-                    margin-bottom: 20px;
-                }
+        rule(".footer-contact li") {
+            fontWeight = FontWeight.bold
+            fontSize = 1.75.rem
+            lineHeight = LineHeight("1")
+            color = Color("#ffffff")
+            marginBottom = 20.px
+        }
 
-                .footer-contact li a {
-                    color: #ffffff;
-                }
+        rule(".footer-contact li a") {
+            color = Color("#ffffff")
+        }
 
-                .footer-copyright {
-                    grid-column: 1 / -1;
-                    font-size: 1.125rem;
-                    color: #8f8f8f;
-                }
-                """.trimIndent()
-            }
+        rule(".footer-copyright") {
+            put("grid-column", "1 / -1")
+            fontSize = 1.125.rem
+            color = Color("#8f8f8f")
         }
     }
 }

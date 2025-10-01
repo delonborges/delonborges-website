@@ -14,7 +14,7 @@ object CoursesRenderer {
                 courses.forEach { course ->
                     li {
                         +course.name
-                        span { +course.duration }
+                        span { +" / ${course.duration}" }
                     }
                 }
             }

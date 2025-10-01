@@ -1,148 +1,139 @@
 package com.delonborges.templates.styles
 
-import kotlinx.html.HEAD
-import kotlinx.html.style
-import kotlinx.html.unsafe
+import kotlinx.css.*
+import kotlinx.css.properties.LineHeight
 
 object EducationStyle {
-    fun render(head: HEAD) {
-        head.style {
-            unsafe {
-                +"""
-                /* Education Styles */
-                .education {
-                    background: #141414;
-                    color: #e0e0e0;
-                }
+    fun CssBuilder.apply() {
+        rule(".education") {
+            backgroundColor = Color("#141414")
+            color = Color("#e0e0e0")
+        }
 
-                .education-container {
-                    max-width: 1200px;
-                    padding: 120px 20px;
-                    margin: 0 auto;
-                    display: grid;
-                    grid-template-columns: 1fr 2fr;
-                    gap: 100px;
-                    position: relative;
-                }
+        rule(".education-container") {
+            maxWidth = 1200.px
+            padding = Padding(120.px, 20.px)
+            margin = Margin(0.px, LinearDimension.auto)
+            display = Display.grid
+            put("grid-template-columns", "1fr 2fr")
+            put("gap", "100px")
+            position = Position.relative
+        }
 
-                .education-container::after {
-                    content: "";
-                    display: block;
-                    width: 130px;
-                    height: 100px;
-                    background: url("/assets/images/lines.svg") no-repeat center;
-                    position: absolute;
-                    bottom: -50px;
-                    left: 20px;
-                }
+        rule(".education-container::after") {
+            put("content", "\"\"")
+            display = Display.block
+            width = 130.px
+            height = 100.px
+            put("background", "url(\"/assets/images/lines.svg\") no-repeat center")
+            position = Position.absolute
+            bottom = (-50).px
+            left = 20.px
+        }
 
-                .education .subtitle {
-                    color: #000000;
-                    max-width: 5ch;
-                }
+        rule(".education .subtitle") {
+            color = Color("#000000")
+            put("max-width", "5ch")
+        }
 
-                .education-text {
-                    font-size: 1.5rem;
-                    line-height: 1.33;
-                    max-width: 50ch;
-                    margin-bottom: 60px;
-                    color: #a3a3a3;
-                }
+        rule(".education-text") {
+            fontSize = 1.5.rem
+            lineHeight = LineHeight("1.33")
+            put("max-width", "50ch")
+            marginBottom = 60.px
+            color = Color("#a3a3a3")
+        }
 
-                .education-text strong {
-                    color: #ffffff;
-                }
+        rule(".education-text strong") {
+            color = Color("#ffffff")
+        }
 
-                .education-list {
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 20px;
-                    margin-bottom: 60px;
-                }
+        rule(".education-list") {
+            display = Display.flex
+            flexWrap = FlexWrap.wrap
+            put("gap", "20px")
+            marginBottom = 60.px
+        }
 
-                .education-item {
-                    flex: 1;
-                    background: #000000;
-                    padding: 20px;
-                    border-radius: 4px;
-                    display: flex;
-                    flex-direction: column;
-                }
+        rule(".education-item") {
+            put("flex", "1")
+            backgroundColor = Color("#000000")
+            padding = Padding(20.px)
+            borderRadius = 4.px
+            display = Display.flex
+            flexDirection = FlexDirection.column
+        }
 
-                .education-type {
-                    font-size: .875rem;
-                    text-transform: uppercase;
-                    color: #a3a3a3;
-                    margin-bottom: 10px;
-                }
+        rule(".education-type") {
+            fontSize = 0.875.rem
+            textTransform = TextTransform.uppercase
+            color = Color("#a3a3a3")
+            marginBottom = 10.px
+        }
 
-                .education-course {
-                    flex: 1;
-                    font-size: 1.125rem;
-                    line-height: 1.4;
-                    margin-bottom: 40px;
-                    position: relative;
-                }
+        rule(".education-course") {
+            put("flex", "1")
+            fontSize = 1.125.rem
+            lineHeight = LineHeight("1.4")
+            marginBottom = 40.px
+            position = Position.relative
+        }
 
-                .education-course::before {
-                    content: '';
-                    display: block;
-                    width: 4px;
-                    height: 20px;
-                    background: linear-gradient(#f24f00, #d13100);
-                    position: absolute;
-                    left: -24px;
-                }
+        rule(".education-course::before") {
+            put("content", "''")
+            display = Display.block
+            width = 4.px
+            height = 20.px
+            put("background", "linear-gradient(#f24f00, #d13100)")
+            position = Position.absolute
+            left = (-24).px
+        }
 
-                .education-institute {
-                    font-size: 1.125rem;
-                    color: #a3a3a3;
-                }
+        rule(".education-institute") {
+            fontSize = 1.125.rem
+            color = Color("#a3a3a3")
+        }
 
-                .education-extra-courses,
-                .education-extra-courses-projects {
-                    margin-bottom: 60px;
-                }
+        rule(".education-extra-courses, .education-extra-courses-projects") {
+            marginBottom = 60.px
+        }
 
-                .education-extra-courses-projects a {
-                    color: #ffffff;
-                }
+        rule(".education-extra-courses-projects a") {
+            color = Color("#ffffff")
+        }
 
-                .education-extra h3 {
-                    font-size: 0.875rem;
-                    line-height: 1.4;
-                    text-transform: uppercase;
-                    color: #8f8f8f;
-                    margin-bottom: 30px;
-                }
+        rule(".education-extra h3") {
+            fontSize = 0.875.rem
+            lineHeight = LineHeight("1.4")
+            textTransform = TextTransform.uppercase
+            color = Color("#8f8f8f")
+            marginBottom = 30.px
+        }
 
-                .education-extra li {
-                    font-size: 1.125rem;
-                    line-height: 1.1;
-                    margin-bottom: 20px;
-                }
+        rule(".education-extra li") {
+            fontSize = 1.125.rem
+            lineHeight = LineHeight("1.1")
+            marginBottom = 20.px
+        }
 
-                .education-extra span {
-                    color: #8f8f8f;
-                }
+        rule(".education-extra span") {
+            color = Color("#8f8f8f")
+        }
 
-                .languages {
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 10px;
-                    align-content: start;
-                }
+        rule(".languages") {
+            display = Display.flex
+            flexWrap = FlexWrap.wrap
+            put("gap", "10px")
+            put("align-content", "start")
+        }
 
-                .languages li {
-                    font-size: 0.875rem;
-                    line-height: 1.4;
-                    border-radius: 4px;
-                    background: #ffffff;
-                    padding: 5px 10px;
-                    color: #141414;
-                }
-                """.trimIndent()
-            }
+        rule(".languages li") {
+            fontSize = 0.875.rem
+            lineHeight = LineHeight("1.4")
+            borderRadius = 4.px
+            backgroundColor = Color("#ffffff")
+            padding = Padding(5.px, 10.px)
+            color = Color("#141414")
         }
     }
 }
