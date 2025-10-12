@@ -32,23 +32,23 @@ A clean and responsive portfolio website built with pure HTML and CSS, featuring
 
 ```
 delonborges-website/
-├── index.html              # Main HTML file with content
+├── index.html                  # Main HTML file with content
 ├── assets/
-│   ├── images/            # SVG icons and profile images
+│   ├── images                  # SVG icons and profile images
 │   │   ├── education.svg
 │   │   ├── languages.svg
 │   │   ├── lines.svg
 │   │   ├── logo.svg
 │   │   ├── profile.png
 │   │   └── projects.svg
-│   └── styles/            # Modular CSS files
-│       ├── style.css      # Main CSS file (imports)
-│       ├── global.css     # Global styles and resets
-│       ├── header.css     # Header and navigation styles
-│       ├── introduction.css # Hero section styles
-│       ├── experience.css # Experience section styles
-│       ├── education.css  # Education section styles
-│       └── footer.css     # Footer and contact styles
+│   └── styles/                 # Modular CSS files
+│       ├── style.css           # Main CSS file (imports)
+│       ├── global.css          # Global styles and resets
+│       ├── header.css          # Header and navigation styles
+│       ├── introduction.css    # Introduction section styles
+│       ├── experience.css      # Experience section styles
+│       ├── education.css       # Education section styles
+│       └── footer.css          # Footer and contact styles
 ├── LICENSE
 └── README.md
 ```
@@ -59,7 +59,7 @@ delonborges-website/
 
 ### Prerequisites
 
-No dependencies required. Just a modern web browser.
+No dependencies are required. Just a modern web browser.
 
 ### Running Locally
 
@@ -75,7 +75,7 @@ cd delonborges-website
 
 3. Open `index.html` in your browser:
    - Double-click the file, or
-   - Use a local server (recommended):
+   - Use a local server:
    ```bash
    # Using Python
    python -m http.server 8000
